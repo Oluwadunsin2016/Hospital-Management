@@ -1,0 +1,32 @@
+<div class="home">
+  <div class="existed" *ngIf="existed; else notexited">
+    <div class="main">
+      <h1 class="text-primary">
+       {{ existed_patient.Surname }} {{ existed_patient.First_Name }}
+        {{ existed_patient.Last_Name }}, 
+      </h1>
+      <h2>you're welcome to BUTH Ogbomoso </h2>
+      <p>
+      
+      first-class christian Teaching Hospital marked by excellence and godliness for the training of doctors, nurses and other medical professionals. 
+      </p>
+    </div>
+  </div>
+
+  <ng-template #notexited>
+    <div class="notExisted">
+      <div class="sub">
+        <h1 class="text-primary">You're welcome</h1>
+        <h2>Kindly register or login to enjoy our services</h2>
+        <p>
+      BUTH is the first-class christian Teaching Hospital marked by excellence and godliness for the training of doctors, nurses and other medical professionals. 
+        </p>
+
+        <a routerLink="/registration" class="btn btn-outline-dark mt-5 me-3"
+          >Sign Up</a
+        >
+        <a routerLink="/login" class="btn btn-success mt-5">Sign In</a>
+      </div>
+    </div>
+  </ng-template>
+</div>

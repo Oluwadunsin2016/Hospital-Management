@@ -1,0 +1,36 @@
+<div class="container-fluid login">
+  <div class="row">
+    <div class="co mx-auto mt-4 center border-right text-center shadow p-3">
+      <h1 class="w-100 text-center mb-4">Login</h1>
+      <div>
+       
+        
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="email"
+            [(ngModel)]="email"
+            class="form-control mb-2"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Password"
+            id="password"
+            class="form-control mb-2"
+            required
+          />
+       <button  type="submit"
+          name=""
+          value="Login"
+          id=""
+          class="btn btn-success "
+          (click)="logIn()">Login</button>
+        <p class="mt-2">Don't have an account? <a routerLink="/registration">Sign Up here</a></p>
+      </div>
+    </div>
+  </div>
+</div>

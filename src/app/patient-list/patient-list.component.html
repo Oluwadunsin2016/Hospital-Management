@@ -1,0 +1,28 @@
+<div class="container-fluid list">
+  <div class="row">
+    <div class="col-8 text-white mt-4 mx-auto">
+      <table class="table table-bordered table-striped table hover">
+      <thead>
+      <th>S/N</th>
+      <th>Surname</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>View</th>
+      </thead>
+
+      <tbody *ngFor="let id=index; let patient of existed_patients">
+     <tr>
+      <td>{{id+1}}</td>
+      <td>{{patient.Surname}}</td>
+      <td>{{patient.First_Name}}</td>
+      <td>{{patient.Last_Name}}</td>
+      <th>
+      <button class="btn btn-info" [routerLink]="'patientdetail/'+id" (click)="view(id)">View</button>
+      <!-- <button class="btn btn-danger" (click)="del(id)">Delete</button> -->
+      </th>
+     </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>

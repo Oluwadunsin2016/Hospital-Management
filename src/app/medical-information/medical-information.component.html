@@ -1,0 +1,106 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="">
+      <h1 class="w-100 text-center mb-4">Medical Information</h1>
+      <div>
+        <input
+          type="text"
+          name="geno"
+          [(ngModel)]="geno"
+          placeholder="Genotype"
+          id="geno"
+          class="form-control mb-2"
+          required
+          autofocus
+        />
+
+        <input
+          type="text"
+          name="bgroup"
+          [(ngModel)]="bgroup"
+          placeholder="Blood Group"
+          id="bgroup"
+          class="form-control mb-2"
+          required
+        />
+        <input
+          type="text"
+          name="pcv"
+          [(ngModel)]="pcv"
+          placeholder="PCV"
+          id="pcv"
+          class="form-control mb-2"
+          required
+        />
+
+        <input
+          type="text"
+          name="bp"
+          [(ngModel)]="bp"
+          placeholder="Blood Presure"
+          id="bp"
+          class="form-control mb-2"
+          required
+        />
+
+        <input
+          type="text"
+          [(ngModel)]="hiv"
+          placeholder="HIV/AIDS"
+          id="hiv"
+          class="form-control mb-2"
+          required
+        />
+        <input
+          type="text"
+          [(ngModel)]="ray"
+          placeholder="Chest X-ray"
+          id="ray"
+          class="form-control mb-2"
+          required
+        />
+
+       
+        <input
+          type="text"
+          name="text"
+          [(ngModel)]="hepa"
+          placeholder="Hepatitis"
+          id="hepa"
+          class="form-control mb-2"
+        />
+       
+        <input
+          type="text"
+          name="text"
+          [(ngModel)]="weight"
+          placeholder="Weight"
+          id="weight"
+          class="form-control mb-2"
+        />
+
+        <div class="text-center mt-4">
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="Back"
+            class="btn btn-danger mx-3"
+            (click)="back()"
+          />
+
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="Save"
+            class="btn btn-success mx-3"
+            (click)="update()"
+          />
+        </div>
+
+        <!-- <button (click)="rand(10)">rand</button> -->
+      </div>
+    </div>
+  </div>
+</div>

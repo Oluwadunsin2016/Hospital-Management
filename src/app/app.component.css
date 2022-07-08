@@ -1,0 +1,130 @@
+.con {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-toggler{
+background-color: #ddd;
+border: 1px solid #999;
+outline: none;
+}
+/* .navbar-toggler:active{
+outline: none;
+border:none;
+} */
+
+nav {
+  padding: 10px 25px;
+}
+
+.navbar-nav {
+  padding-top: 15px;
+}
+
+nav {
+  padding: 10px 25px;
+}
+
+.navbar-brand h4 {
+  font-size: 25px;
+}
+
+.nav-item a h5 {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
+  border-width: 0 0 1px;
+}
+
+a {
+  color: #000;
+}
+
+footer {
+  background-color: #f2f2f2;
+}
+
+.container {
+  padding: 50px 25px 0 25px;
+}
+
+.row {
+  margin: -15px;
+}
+footer .widget h5 {
+  margin: 30px 0 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1em;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.widget ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.widget ul li,
+.widget p {
+  line-height: 1.6em;
+  font-size: 18px;
+}
+.widget a,
+.widget ul li,
+.widget p {
+  text-decoration: none;
+  color: #666;
+}
+
+.company-social a i {
+  background: #3873ae;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.sub-footer {
+  margin-top: 30px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.sub-footer a,
+.sub-footer p {
+  text-decoration: none;
+  font-size: 18px;
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  .text-left {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+}

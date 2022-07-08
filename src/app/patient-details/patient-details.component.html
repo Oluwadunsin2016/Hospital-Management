@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 my-4 mx-auto py-4 shadow">
+      <div class="Profile">
+        <div class="image ms-4 mt-3">
+        <img [src]="current_patient.Image" height="280" width="230" alt="">
+        </div>
+        <div class="Basic information">
+          <h3 class="">Basic Information</h3>
+          <div class="content py-2">
+            <label for="">Surname</label>
+            <span>{{current_patient.Surname}}</span>
+          </div>
+          <div class="content py-2">
+            <label for="">First Name</label>
+            <span>{{current_patient.First_Name}}</span>
+          </div>
+          <div class="content py-2">
+            <label for="">Last Name</label>
+             <span>{{current_patient.Last_Name}}</span>
+          </div>
+          <div class="content py-2">
+            <label for="">Date of Birth</label>
+            <span>{{current_patient.Date_of_Birth}}</span>
+          </div>
+          <div class="content py-2">
+            <label for="">Gender</label>
+           <span>{{current_patient.Gender}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="Contact details">
+        <h3 class="">Contact Details</h3>
+        <div class="content py-2">
+          <label for="">Phone Number</label>
+       <span><i class="fa fa-phone text-info" aria-hidden="true"></i> {{current_patient.Phone_Number}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">Email</label>
+         <span><i class="fa fa-envelope-o text-primary" aria-hidden="true"></i> {{current_patient.Email}}</span>
+        </div>
+      </div>
+      <div class="Medical information">
+        <h3 class="">Medical Information</h3>
+        <div class="content py-2">
+          <label for="">Genotype</label>
+          <span>{{current_patient.Genotype}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">Blood Group</label>
+         <span>{{current_patient.Blood_Group}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">PCV</label>
+         <span>{{current_patient.PCV}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">Blood Presure</label>
+         <span>{{current_patient.Blood_Presure}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">HIV I & II</label>
+         <span>{{current_patient.HIV}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">Chest X-ray</label>
+         <span>{{current_patient.X_ray}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">Hepatitis B & C</label>
+         <span>{{current_patient.Hepatitis}}</span>
+        </div>
+        <div class="content py-2">
+          <label for="">Weight</label>
+         <span>{{current_patient.Weight}}</span>
+        </div>
+      </div>
+     <div class="butt"> 
+     <div *ngIf="mode; else updatemode">
+     <button class="btn btn-success my-4" (click)="edit()"><i class="fa fa-pencil" aria-hidden="true"></i> Edit medical details</button>
+     </div>
+
+     <ng-template #updatemode>
+     <button class="btn btn-primary my-4" (click)="upload()">Upload medical details</button>
+     </ng-template>
+     </div>
+    </div>
+  </div>
+</div>

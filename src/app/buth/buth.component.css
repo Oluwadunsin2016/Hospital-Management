@@ -1,0 +1,57 @@
+
+.container-fluid{
+padding-top: 100px;
+}
+
+.buth{
+width:80%;
+margin: 20px auto;
+}
+
+.departments{
+display: grid;
+gap: 1.5rem;
+grid-template-columns: repeat(2,1fr);
+padding-block: 2rem;
+width: min(95%, 80rem);
+margin-inline: auto;
+}
+
+.grid-col-span-2{
+grid-column: span 2;
+width: 60%;
+margin: 0 auto;
+}
+
+h5{
+font-size: 22px;
+font-family:'Roboto', sans-serif;
+}
+p{
+color: #666;
+font-size: 18px;
+font-family:'Open Sans', sans-serif;
+
+}
+
+
+@media (max-width:800px){
+.departments{
+display: block;
+width: min(80%, 50rem);
+}
+
+img{
+height: 250px;
+}
+
+.child{
+margin: 20px 0;
+}
+
+.grid-col-span-2{
+width: 100%;
+margin: 0;
+}
+
+}

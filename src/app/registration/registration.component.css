@@ -1,0 +1,46 @@
+.col-6{
+margin: 20px auto;
+}
+
+input, select{
+font-size: 18px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+font-style: italic;
+}
+
+h1{
+font-size: 25px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+font-style: italic;
+}
+
+
+.register{
+padding-top: 100px;
+background: linear-gradient(rgba(223, 137, 10, 0.4),rgba(11, 62, 230, 0.6)), url(../../assets/doctors-nurse-24669349.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top;
+}
+form{
+background-color: rgba(255, 255, 255, 0.4);
+width: 35%;
+}
+.justify{
+position: relative;
+text-align: center;
+}
+
+p{
+font-size: 18px;
+font-style: italic;
+}
+
+
+ @media only screen and (max-width:1000px) {
+    form{
+width: 60%;
+}
+}

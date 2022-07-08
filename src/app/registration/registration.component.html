@@ -1,0 +1,229 @@
+<div class="container-fluid register">
+  <div class="row">
+    <form
+      #patientForm="ngForm"
+      class="center mx-auto my-4 py-3 shadow border-right"
+    >
+      <h1 class="w-100 text-center mb-4">Registration Form</h1>
+      <div>
+        <input
+          type="text"
+          name="surName"
+          #surname="ngModel"
+          [class.is-invalid]="surname.invalid && surname.touched"
+          [class.is-valid]="surname.valid"
+          [(ngModel)]="surName"
+          placeholder="Surname"
+          id="surName"
+          class="form-control mb-2"
+          required
+        minlength="3"
+        maxlength="15"
+          autofocus
+        />
+
+        <div
+          class="text-danger"
+          *ngIf="surname.errors && surname.invalid && surname.touched"
+        >
+          <small *ngIf="surname.errors.required"
+            >Surname is required</small
+          >
+          <small *ngIf="surname.errors.minlength"
+            >Surname must be atleast 3 letters</small
+          >
+          <small *ngIf="surname.errors.maxlength"
+            >Surname must not be more than 15</small
+          >
+        </div>
+
+        <input
+          type="text"
+          name="FirstName"
+          #firstname="ngModel"
+          [class.is-invalid]="firstname.invalid && firstname.touched"
+          [class.is-valid]="firstname.valid"
+          [(ngModel)]="firstName"
+          placeholder="First Name"
+          id="FirstName"
+          class="form-control mb-2"
+          required
+          minlength="3"
+         maxlength="15"
+        />
+
+        <div
+          class="text-danger"
+          *ngIf="firstname.errors && firstname.invalid && firstname.touched"
+        >
+          <small *ngIf="firstname.errors.required"
+            >First name is required</small
+          >
+          <small *ngIf="firstname.errors.minlength"
+            >First name must be atleast 3 letters</small
+          >
+          <small *ngIf="firstname.errors.maxlength"
+            >First name must not be more than 15</small
+          >
+        </div>
+
+        <input
+          type="text"
+          name="LastName"
+          #last="ngModel"
+          [(ngModel)]="lastName"
+          [class.is-invalid]="last.invalid && last.touched"
+          [class.is-valid]="last.valid"
+          placeholder="last Name"
+          id="LastName"
+          class="form-control mb-2"
+          minlength="3"
+         maxlength="15"
+          required
+        />
+
+        <div
+          class="text-danger"
+          *ngIf="last.errors && last.invalid && last.touched"
+        >
+          <small *ngIf="last.errors.required">Last name is required</small>
+          <small *ngIf="last.errors.minlength"
+            >Last name must be atleast 3 letters</small
+          >
+          <small *ngIf="last.errors.maxlength"
+            >Last name must not be more than 20</small
+          >
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          #em="ngModel"
+          [(ngModel)]="email"
+          [class.is-invalid]="em.invalid && em.touched"
+          [class.is-valid]="em.valid"
+          placeholder="Email"
+          id="email"
+          class="form-control mb-2"
+          required
+          pattern="[a-zA-Z0-9]{3,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,4}"
+        />
+
+        <div class="text-danger" *ngIf="em.errors && em.invalid && em.touched">
+          <small *ngIf="em.errors.required">Email is required</small>
+          <small *ngIf="em.errors.pattern">
+            Email must follow this pattern:
+            <ol>
+              <li>The first letters must not less than 3</li>
+              <li>It should include an @</li>
+              <li>The letters following @ must not less than 2</li>
+              <li>It should then followed by a dot</li>
+              <li>The last letters must not less than 2 and not more than 4</li>
+            </ol>
+          </small>
+        </div>
+
+        <input
+          type="tel"
+          name="phone"
+          #phone="ngModel"
+          [(ngModel)]="phoneNumber"
+          [class.is-valid]="phone.valid"
+          [class.is-invalid]="phone.invalid && phone.touched"
+          placeholder="Phone Number"
+          id="phone"
+          class="form-control mb-2"
+          required
+          pattern="[0]{1}[789]{1}[01]{1}[0-9]{8}"
+        />
+
+        <div
+          class="text-danger"
+          *ngIf="phone.errors && phone.invalid && phone.touched"
+        >
+          <small *ngIf="phone.errors.required">Phone number is required</small>
+          <small *ngIf="phone.errors.pattern"
+            >It's not a valid Nigeria phone number</small
+          >
+        </div>
+
+        <input
+          type="date"
+          name="dob"
+          #date="ngModel"
+          [class.is-valid]="date.valid"
+          [class.is-invalid]="date.invalid && date.touched"
+          [(ngModel)]="dob"
+          placeholder="Date of Birth"
+          id="age"
+          class="form-control mb-2"
+          required
+        />
+
+        <div
+          class="text-danger"
+          *ngIf="date.errors && date.invalid && date.touched"
+        >
+          <small>Date of Birth is required</small>
+        </div>
+
+        <select
+          name="gender"
+          #gen="ngModel"
+          (change)="validateGender(gen.value)"
+          (blur)="validateGender(gen.value)"
+          [class.is-valid]="!hasError"
+          [class.is-invalid]="hasError&&gen.touched"
+          [(ngModel)]="gender"
+          required
+          class="form-control mb-2"
+        >
+          <option value="default">Choose</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Neutral">Neutral</option>
+        </select>
+        <small class="text-danger" [class.d-none]="!hasError || gen.untouched">
+        Choose your gender
+        </small>
+
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Password"
+          #pass="ngModel"
+          [class.is-valid]="pass.valid"
+          [class.is-invalid]="pass.invalid && pass.touched"
+          id="password"
+          class="form-control mb-2"
+          required
+        />
+        <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Password is required</small>
+
+        <input
+          type="file"
+          name="image"
+          #imag="ngModel"
+          [(ngModel)]="file"
+          placeholder="image"
+          id="file"
+          class="form-control mb-2"
+          (change)="onChange($event)"
+        />
+       
+
+       <div class="justify"><button  [disabled]="patientForm.form.invalid||hasError"
+          name=""
+          id=""
+          class="btn btn-success"
+          (click)="register()">Submit</button>
+
+        <p class="mt-2">
+          Already have an account? <a routerLink="/login">Sign In here</a>
+        </p>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,298 @@
+<!-- <app-home></app-home> -->
+<!-- <app-registration></app-registration> -->
+<!-- <app-todo></app-todo> -->
+
+<div class="body">
+  <div *ngIf="existed; else notLoggedIn">
+    <nav class="navbar navbar-fixed-top navbar-expand-lg bg-light shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/buth"
+          ><img src="../assets/buthlogo.png" height="45" alt=""
+        /></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars text-dark" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="con">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  routerLink="/home"
+                  ><h5>
+                    <i class="fa fa-home" aria-hidden="true"></i> HOME
+                  </h5></a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/myProfile"
+                  ><h5>
+                    <i class="fa fa-user" aria-hidden="true"></i> MY PROFILE
+                  </h5></a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/aboutUs"
+                  ><h5>
+                    <i class="fa fa-users" aria-hidden="true"></i> ABOUT US
+                  </h5></a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="" (click)="logout()"
+                  ><h5>
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> LOGOUT
+                  </h5></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <ng-template #notLoggedIn>
+    <nav class="navbar navbar-fixed-top navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/buth"
+          ><img src="../assets/buthlogo.png" height="45" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars text-dark" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="con">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  routerLink="/home"
+                  ><h5>
+                    <i class="fa fa-home" aria-hidden="true"></i> HOME
+                  </h5></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/registration"
+                  ><h5>
+                    <i class="fa fa-user-plus" aria-hidden="true"></i> REGISTER
+                  </h5></a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link disabled"><h5>DISABLED</h5></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login"
+                  ><h5>
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN
+                  </h5></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </ng-template>
+
+  <router-outlet></router-outlet>
+ 
+<footer>
+      <div class="container">
+        <div class="row one">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+              <div class="widget">
+                <h5>About BUTH Ogbomoso</h5>
+                <p>
+                </p><ul>
+				<li> <a href="https://www.buth.edu.ng/AboutBUTH/history.php" title="History Bowen University Teaching Hospital" target="_blank">How it started...</a></li>
+		          <li><a href="https://www.buth.edu.ng/AboutBUTH/index.php#management">BUTH Management</a></li>
+          <li><a href="https://www.buth.edu.ng/AboutBUTH/medical_social.php">Medical Social Servies</a></li>
+                  <!-- <li><a href="#">Terms & conditions</a></li> -->
+                  <li><a href="https://bowenmedicalibrary.wordpress.com">LIBRARY BLOGS</a></li>
+                    <!-- <li><a href="https://www.bookboon.com/" target="_blank">E-Library (Bookboon)</a></li> -->
+			 <!-- <li><a href="https://www.pdfdrive.com/" target="_blank">E-Library (PDFDrive)</a></li> -->
+                  <!-- <li><a href="https://www.jstor.org/" target="_blank">E-Library (JSTOR)</a></li> -->
+			 <!-- <li><a href="https://www.who.int/hinari/en/" target="_blank">E-Library (HINARI)</a></li> -->
+                </ul>
+                <p></p>
+              </div>
+            </div>
+            <div class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+              <div class="widget">
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+              <div class="widget">
+				<h5>Contact Details</h5>
+                <ul>
+                  <li>
+                    <span class="fa-stack fa-lg" data-target="#adminLogin" data-toggle="modal">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+								</span> Click on contact us for the location map
+                  </li>
+                  <li>
+                    <span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+								</span> +234 806 277 0113
+                  </li>
+                  <li>
+                    <span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+								</span> info@buth.edu.ng
+                  </li>
+					<li>
+                    <span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+								</span>admin_office@buth.edu.ng
+										
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+              <div class="widget">
+                <h5>Our location</h5>
+                <p>Plot 4, Ilorin – Ogbomoso Road P. O. Box 15, Ogbomoso. Oyo State, Nigeria.</p>
+
+              </div>
+            </div>
+            <div class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul class="company-social">
+					<li><a href="https://facebook.com/buthsono" target="_blank"><i class="fa fa-facebook"></i></a> | <a href="https://mail.google.com/a/buth.edu.ng">Check Mail</a> </li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--adminLogin box-->
+  <div class="modal fade" id="adminLogin" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content no 1-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h3 class="modal-title">WebMaster Login Page</h3>
+        </div>
+        <div class="modal-body padtrbl">
+
+          <div class="login-box-body">
+            <p id="message"></p>
+            <p class="login-box-msg" style="text-align: left; font-size: 16px;">Strictly for BUTH Webmaster</p>
+            <div class="form-group">
+              <form id="adminLoginForm" method="POST" action="https://buth.edu.ng/logIn/authentication.php">
+                <div class="form-group has-feedback">
+                  <!----- username -------------->
+                  <input class="form-control" placeholder="Official Email" id="loginid" name="adminEmail" type="text" autocomplete="off" autofocus="">
+                 
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <!----- password -------------->
+                  <input class="form-control" placeholder="Password" id="loginpsw" name="adminPassword" type="password" autocomplete="off">
+               
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+        
+                    <input type="submit" class="btn btn-info" style="margin-left: 25px;" name="loginAsWebMaster" id="loginBtn" value="LOGIN">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--/adminLogin box-->
+      
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInLeft animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                <div class="text-left">
+                  <p>©Copyright 2014 - 2022 BUTH Ogbomoso. All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
+                <div class="text-right">
+                  <div class="credits">
+                    <a href="#">Developed by BUTH ICT</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</div>
+
+
+<!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/Doctors.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/Doctors.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/Doctors.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->

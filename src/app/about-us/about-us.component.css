@@ -1,0 +1,47 @@
+
+.container-fluid{
+padding-top: 100px;
+}
+
+.buth{
+width:80%;
+margin: 20px auto;
+}
+
+.card-body h5{
+font-size: 22px;
+color: #666;
+}
+.cta-text h3{
+font-size: 25px;
+font-weight: bold;
+}
+.cta-text p{
+color: #666;
+font-size: 18px;
+}
+
+.container{
+padding: 40px 0;
+}
+
+.col-md-12{
+background-color: #f9f9f9;
+padding: 20px;
+}
+
+.row{
+display: flex;
+}
+
+@media (max-width:800px){
+.row{
+display: block;
+}
+.container{
+padding: 40px 20px;
+}
+img{
+height: 250px;
+}
+}
