@@ -86,5 +86,22 @@ margin:0 10% 0 10%;
 margin: 0 auto;
 width: 80%;
 }
-
 }
+
+ @media only screen and (max-width:1000px) {
+.col-8{
+width: 80%;
+}
+}
+
+
+ @media only screen and (max-width:600px) {
+.col-8{
+width: 90%;
+}
+.image img{
+width: 90%;
+margin:0;
+}
+}
+
